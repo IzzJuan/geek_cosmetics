@@ -6,7 +6,7 @@ function App() {
         <div className="App">
             <Router>
                 <Switch>
-                    <Route path='/' render={() => {
+                    <Route exact path='/' render={() => {
                         return <header className="App-header">
                             <p>
                                 Edit <code>src/App.js</code> and save to reload.
