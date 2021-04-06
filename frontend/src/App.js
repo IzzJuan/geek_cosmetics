@@ -1,5 +1,6 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Switch, /*Link*/} from 'react-router-dom';
+import Store from './components/Store'
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                             </a>
                         </header>
                     }}/>
+                    <Route path='/store' component={Store}/>
                 </Switch>
             </Router>
         </div>
