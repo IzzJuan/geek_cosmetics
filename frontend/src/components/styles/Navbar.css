@@ -1,0 +1,116 @@
+header
+{
+    position : fixed;
+    display : flex;
+    padding: 0.5rem 0px;
+    background : #141820;
+    width : 100vw;
+}
+
+.navbarListContainer
+{
+    display : flex;
+    width : 100%;
+    padding: 0px 1.5rem;
+}
+
+.linkStyles
+{
+    padding : 1rem ;
+    margin : 0px 0.2rem;
+    color : white;
+    text-decoration : none;
+}
+
+.linkStyles:hover
+{
+    cursor:pointer;
+    border-radius: 10%;
+    background-color:#282c34;
+    color:white !important;
+    user-select: none;
+}
+
+.containerNavbarList2body
+{
+    margin-bottom:1rem;
+}
+
+.navbarList2
+{
+    width:100%;
+    display: none;
+    /*padding : 1rem ;
+    margin : 0px 0.2rem;
+    color : white;
+    text-decoration : none;*/
+}
+
+.btn-menu
+{
+    border:none;
+    background: none;
+}
+
+.containerBtnMenu2
+{
+    display:flex !important;
+    justify-content: flex-end;
+}
+
+.imgMenu
+{
+    width: 2rem;
+    height:auto;
+}
+
+.containerLinks2
+{
+    display:flex !important;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.divTouchLeave
+{
+    display:none;
+}
+
+@media (max-width: 400px) {
+
+    .navbarListContainer
+    {
+        display:flex;
+        justify-content: flex-end;
+    }
+
+    .navbarList 
+    {
+      display: none;
+    }
+
+    .navbarList2
+    {
+        display:flex;
+        justify-content: flex-end;
+    }
+
+    .linkStyles
+    {
+        width:85%;
+        text-align: left;
+    }
+
+    .linkStyles:hover
+    {
+        cursor:pointer;
+        border-radius: 0px;
+        background-color:#141820;
+        user-select: none
+    }
+    
+    .divTouchLeave{
+        display:block
+    }
+}
