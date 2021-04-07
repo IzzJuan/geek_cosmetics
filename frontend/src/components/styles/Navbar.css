@@ -4,7 +4,7 @@ header
     display : flex;
     padding: 0.5rem 0px;
     background : #141820;
-    width : 100%;
+    width : 100vw;
 }
 
 .navbarListContainer
@@ -25,9 +25,12 @@ header
 .linkStyles:hover
 {
     cursor:pointer;
-    border-radius: 50%;
+
+    border-radius: 10%;
     background-color:#282c34;
-    user-select: none
+    color:white !important;
+    user-select: none;
+
 }
 
 .containerNavbarList2body
@@ -71,6 +74,11 @@ header
     align-items: flex-start;
 }
 
+
+.divTouchLeave
+{
+    display:none;
+}
 @media (max-width: 400px) {
 
     .navbarListContainer
@@ -102,5 +110,9 @@ header
         border-radius: 0px;
         background-color:#141820;
         user-select: none
+    }
+ 
+    .divTouchLeave{
+        display:block
     }
 }

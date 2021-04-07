@@ -19,7 +19,9 @@ const Navbar = () => {
     return(
         <div className="header-container">
             <header className="navbarStyles" style={{zIndex:'2'}}>
-                <ul style={{listStyleType:'none'}} className="navbarListContainer">
+
+                <ul style={{listStyleType:'none'}} className="navbarListContainer mt-3">
+
                     <li className="navbarList">
                         <Link to="/" className="linkStyles">Inicio</Link>
                         <Link to="/comprar" className="linkStyles">Comprar</Link>
@@ -50,7 +52,8 @@ const Navbar = () => {
                     </li>
                 </ul>
             </header>
-            <div style={{height:'100vh', width:'100vw', background:'none', position:'absolute', zIndex:'1'}} onClick={() => setShowNav2(false)} />
+
+            <div className="divTouchLeave" style={{height:'100vh', width:'100vw', background:'none', position:'absolute', zIndex:'1'}} onClick={() => setShowNav2(false)} />
         </div>
         
     )

@@ -1,0 +1,25 @@
+.imgFondo
+{
+    background-image: url("../../images/imagenLibros.jpeg");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.linksInicio:hover
+{
+    background-color: white;
+    border:none;
+    color:black !important;
+}
+
+@media (max-width: 380px) {
+
+    .title-bienvenidos{
+        font-size:30px !important;
+    }
+
+    .containerButtons{
+        margin-left:0px !important;
+    }
+
+}
