@@ -19,6 +19,7 @@ const Navbar = () => {
     return(
         <div className="header-container">
             <header className="navbarStyles" style={{zIndex:'2'}}>
+
                 <ul style={{listStyleType:'none'}} className="navbarListContainer mt-3">
                     <li className="navbarList">
                         <Link to="/" className="linkStyles">Inicio</Link>
