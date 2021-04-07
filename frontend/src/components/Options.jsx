@@ -22,7 +22,7 @@ const Options = () => {
                 </div>
                 <div className="col-md-6" >
                     <div className="d-flex flex-column align-items-center containerButtons" style={{marginLeft:'1rem'}}>
-                        <Link to="/productos" style={{color:'white', textDecoration:'none'}}> 
+                        <Link to="/store" style={{color:'white', textDecoration:'none'}}>
                         <div className="my-2 d-flex justify-content-center align-items-center linksInicio" style={{width:'15rem', height:'3rem', border:'1px solid white'}}>
                             Ver productos
                         </div>

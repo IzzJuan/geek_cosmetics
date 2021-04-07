@@ -19,7 +19,6 @@ function Store() {
     return (
         <div className="container">
             <div className="row">
-                {console.log(items)}
                 {items.map((item, index) =>{
                     return(<div className="col-sm">
                         <div className="card" style={{width: "18rem"}}>

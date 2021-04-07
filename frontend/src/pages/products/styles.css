@@ -1,0 +1,83 @@
+.productsListSmall
+{
+    display:none;
+}
+
+.featureProduct
+{
+    font-size: 15px;
+    margin:0;
+    text-align: left;
+}
+
+.featureProduct2
+{
+    font-size: 15px;
+    margin:0;
+    text-align: right;
+}
+
+.CiNGuitREdIeROnEtoNvEbeaTChaNSPORtESNeWa
+{
+    margin-top:7.4rem;
+    height: 61vh;
+}
+
+.eaCeNoWELDiOnTinersenTaTerSidecKSTpAt
+{
+    margin-top:3rem;
+    height: 30vh;
+}
+
+.productSelectedContainer
+{
+    height: 61vh
+}
+
+.productsListContainer
+{
+    height: 100%;
+}
+
+.productsListContainer2
+{
+    height: 100%;
+}
+
+@media (max-width: 770px){
+    .productsListSmall
+    {
+        display:block
+    }
+    .productsListBig
+    {
+        display:none;
+    }
+    .eliminarTitle
+    {
+        display:none;
+    }
+    .productSelectedContainer .CiNGuitREdIeROnEtoNvEbeaTChaNSPORtESNeWa
+    {
+        height: 97vh;
+    }
+    .featureProduct .featureProduct2
+    {
+        margin: 1rem 0
+    }
+}
+
+@media (max-width: 575px) {
+
+    .CiNGuitREdIeROnEtoNvEbeaTChaNSPORtESNeWa
+    {
+        margin-top:0.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .featureProduct2{
+        margin-top:1rem;
+        display:flex;
+    }
+}
