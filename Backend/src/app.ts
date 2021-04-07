@@ -1,13 +1,14 @@
 import express, { urlencoded } from "express";
 import morgan from 'morgan';
 import cors from 'cors';
+
 import passport from 'passport';
 //import passportMiddleware from './middlewares/passport'
 
-//import authRoutes from './routes/auth.routes'
-//import todoRoutes from './routes/todo.routes'
-//import imgUploadRoutes from './routes/imgUpload.routes'
-//import privateRoutes from './routes/private.routes'
+import checkAPI from './interfaces/routes/checkAPI';
+import hello from './interfaces/routes/hello';
+import products from "./interfaces/routes/products";
+
 
 const app = express();
 
@@ -20,13 +21,9 @@ app.use(express.json());
 //app.use(passport.initialize());
 //passport.use(passportMiddleware);
 
-app.get('/', (req, res) => {
-    res.send('API funcionando!');
-});
 
-//app.use(authRoutes);
-//app.use(todoRoutes);
-//app.use(imgUploadRoutes);
-//app.use(privateRoutes);
+app.use(checkAPI);
+app.use(hello);
+app.use(products)
 
 export default app;
