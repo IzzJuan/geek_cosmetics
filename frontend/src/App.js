@@ -7,6 +7,9 @@ import Inicio from './pages/inicio'
 //importo componentes
 import Navbar from './components/Navbar'
 
+import Footer from './components/footer'
+
+
 //importo librerias a usar
 import {
   BrowserRouter as Router,
@@ -27,6 +30,7 @@ function App() {
             </div>
           </Route>
         </Switch>
+        <Footer/>
       </Router>
     </div>
   );

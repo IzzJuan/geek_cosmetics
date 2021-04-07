@@ -79,6 +79,7 @@ header
 {
     display:none;
 }
+
 @media (max-width: 400px) {
 
     .navbarListContainer
@@ -111,7 +112,7 @@ header
         background-color:#141820;
         user-select: none
     }
- 
+
     .divTouchLeave{
         display:block
     }
