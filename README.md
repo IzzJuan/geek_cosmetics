@@ -12,7 +12,7 @@ by clicking on the link above.
 
 ## Available Scripts
 
-####1. In **Backend** directory, you can run:
+###1. In **Backend** directory, you can run:
 
 ### `npm i`
 
@@ -33,7 +33,7 @@ code and then start the project with npm start.
 
 Run the transpiled code from TS.
 
-####2. In **Frontend** directory, you can run:
+###2. In **Frontend** directory, you can run:
 
 ### `npm i`
 
