@@ -25,10 +25,12 @@ header
 .linkStyles:hover
 {
     cursor:pointer;
+
     border-radius: 10%;
     background-color:#282c34;
     color:white !important;
     user-select: none;
+
 }
 
 .containerNavbarList2body
@@ -72,11 +74,11 @@ header
     align-items: flex-start;
 }
 
+
 .divTouchLeave
 {
     display:none;
 }
-
 @media (max-width: 400px) {
 
     .navbarListContainer
@@ -109,7 +111,7 @@ header
         background-color:#141820;
         user-select: none
     }
-    
+ 
     .divTouchLeave{
         display:block
     }
