@@ -14,6 +14,10 @@ by clicking on the link above.
 
 ####1. In **Backend** directory, you can run:
 
+### `npm i`
+
+To install all backend dependencies.
+
 ### `npm run dev`
 
 If you are in development stage this transpiles the 
@@ -30,6 +34,10 @@ code and then start the project with npm start.
 Run the transpiled code from TS.
 
 ####2. In **Frontend** directory, you can run:
+
+### `npm i`
+
+To install all frontend dependencies.
 
 ### `npm start`
 
