@@ -1,7 +1,7 @@
 [
     {
         "id" : 1,
-        "nombre" : "Camisa chimba",
+        "nombre" : "Camisa bien mela",
         "descripcion" : "Una camisa de flores muy bonita",
         "precio" : "25.300",
         "url" : "https://i.pinimg.com/originals/f1/7e/0b/f17e0be22fc2a0771b3855d6e9455383.jpg"
@@ -9,7 +9,7 @@
     {
         "id" : 2,
         "nombre" : "Camisa formal",
-        "descripcion" : "loremp insup hdaksjdalsjdasjndkalsdhasjklhas,jxaklsdjxaskldjalsjdalsjdlasdjasdkahsjoasgjfahbmdahsndasogl",
+        "descripcion" : "",
         "precio" : "35.000",
         "url" : "https://http2.mlstatic.com/D_NQ_NP_924043-MCO31047123874_062019-W.jpg"
     },

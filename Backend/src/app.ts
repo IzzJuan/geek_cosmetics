@@ -3,11 +3,12 @@ import morgan from 'morgan';
 import cors from 'cors';
 
 import passport from 'passport';
-//import passportMiddleware from './middlewares/passport'
+//import passportMiddleware from './utils/passport'
 
 import checkAPI from './interfaces/routes/checkAPI';
 import hello from './interfaces/routes/hello';
 import products from "./interfaces/routes/products";
+import auth from "./interfaces/routes/auth";
 
 
 const app = express();
@@ -24,6 +25,7 @@ app.use(express.json());
 
 app.use(checkAPI);
 app.use(hello);
-app.use(products)
+app.use(products);
+app.use(auth)
 
 export default app;

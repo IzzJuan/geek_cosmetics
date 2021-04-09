@@ -8,6 +8,7 @@
     font-size: 15px;
     margin:0;
     text-align: left;
+    width:100%;
 }
 
 .featureProduct2
@@ -31,7 +32,7 @@
 
 .productSelectedContainer
 {
-    height: 61vh
+    min-height: 61vh
 }
 
 .productsListContainer
@@ -43,6 +44,7 @@
 {
     height: 100%;
 }
+
 
 @media (max-width: 770px){
     .productsListSmall
@@ -56,10 +58,6 @@
     .eliminarTitle
     {
         display:none;
-    }
-    .productSelectedContainer .CiNGuitREdIeROnEtoNvEbeaTChaNSPORtESNeWa
-    {
-        height: 97vh;
     }
     .featureProduct .featureProduct2
     {
