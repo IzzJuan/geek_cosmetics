@@ -4,7 +4,7 @@ import React from 'react';
 import "./styles/Options.css"
 
 //importando imagenes
-import fondo from '../images/imagenLibros.jpeg'
+import fondo from '../images/imgcosmetics.jpg'
 
 //importo enrutador
 import {
@@ -24,12 +24,12 @@ const Options = () => {
                     <div className="d-flex flex-column align-items-center containerButtons" style={{marginLeft:'1rem'}}>
                         <Link to="/store" style={{color:'white', textDecoration:'none'}}>
                         <div className="my-2 d-flex justify-content-center align-items-center linksInicio" style={{width:'15rem', height:'3rem', border:'1px solid white'}}>
-                            ¡Comprar YA!
+                            ¡Compra YA!
                         </div>
                         </Link>
                         <Link to="/misproductos" style={{color:'white', textDecoration:'none'}}> 
                             <div className="my-2 d-flex justify-content-center align-items-center linksInicio" style={{width:'15rem', height:'3rem', border:'1px solid white'}}>
-                                Tus productos
+                                Tus compras
                             </div>
                         </Link>
                     </div>

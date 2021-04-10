@@ -10,7 +10,7 @@ import Modal from './Modal';
 
 function BuyCart({carritoAccount, setCarritoAccount}) {
     const [subtotal, setSubtotal] = useState();
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState({open:false, message: ''});
     let history = useHistory();
 
     useEffect(() => valor());
@@ -23,18 +23,40 @@ function BuyCart({carritoAccount, setCarritoAccount}) {
         setSubtotal(subtotals);
     }
 
-    const comprar = () => {
-        if(!JSON.parse(localStorage.getItem('user'))){
+
+    const HandleSubmit = (e) => {
+        e.preventDefault();
+
+        if(!JSON.parse(localStorage.getItem('user'))){  
             history.push('/login');
         } else {
-           setIsOpen(true)
+
+            fetch('http://35.196.233.125:8080/orderproduct', {
+                method: 'POST',
+                body: JSON.stringify({
+                    user_email : JSON.parse(localStorage.getItem('user')),
+                    products : carritoAccount.products
+                }),
+                headers:{
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(res => res.json())
+                .then(res =>setIsOpen({open:true, message: res}))
+                .catch(error => console.log(error))
+
+
         }
+
     }
 
     const prueba = () =>{
-        setIsOpen(false);
-        carritoAccount.products = [];
-        carritoAccount.product_quantity = 0;
+
+        setIsOpen({open:false, message: ''});
+        setCarritoAccount({
+            product_quantity: 0,
+            products: [],
+        });
     }
 
     return(
@@ -47,8 +69,8 @@ function BuyCart({carritoAccount, setCarritoAccount}) {
                                 <div className="dataContainerBuyThing">
                                     <h3 className="text-start">Carrito</h3>
                                 </div>
-                                <Modal  open={isOpen} onClose={() => prueba()}>
-                                    Compra realizada con exito!
+                                <Modal  isOpen={isOpen} onClose={() => prueba()}>
+                                    {isOpen.message}
                                 </Modal>
                                 <div className="dataContainerBuyThing">
                                     {
@@ -85,6 +107,7 @@ function BuyCart({carritoAccount, setCarritoAccount}) {
                                 <hr/>
                                 <div className="dataContainerBuyThing text-end">
                                     <h3>Subtotal: <span>{subtotal}</span></h3>
+                                    <h3>IVA: <span>{subtotal*0.19}</span></h3>
                                 </div>
                             </>
                         ) : (
@@ -105,6 +128,7 @@ function BuyCart({carritoAccount, setCarritoAccount}) {
                                 <hr/>
                                 <div className="dataContainerBuyThing text-end">
                                     <h3>Subtotal: <span>{subtotal}</span></h3>
+                                    <h3>IVA: <span>{subtotal*0.19}</span></h3>
                                 </div>
                             </>
                         )}
@@ -113,9 +137,9 @@ function BuyCart({carritoAccount, setCarritoAccount}) {
                 <div className="col-md-3" >
                     <div className="m-3 p-3" style={{background:'#141820', borderRadius:'5px'}}>
                         <div className="mb-3 text-start" style={{color:'white'}}>
-                            Valor total + IVA: {subtotal+ (subtotal*0.19)}
+                            Total: {subtotal+ (subtotal*0.19)}
                         </div>
-                        <button onClick={comprar} className="p-2 btnComprar" >
+                        <button onClick={HandleSubmit} className="p-2 btnComprar" >
                             Comprar
                         </button>
                     </div>

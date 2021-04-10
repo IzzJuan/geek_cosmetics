@@ -15,7 +15,7 @@ const Login = () => {
 
     const HandleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:8080/login', {
+        fetch('http://35.196.233.125:8080/login', {
             method: 'POST',
             body: JSON.stringify({
                 user_email : datos.email,

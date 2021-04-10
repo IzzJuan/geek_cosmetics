@@ -33,7 +33,7 @@ const Register = () => {
                 mensaje: 'Las contraseñas no son iguales'
             })
         } else {
-            fetch('http://localhost:8080/register', {
+            fetch('http://35.196.233.125:8080/register', {
                 method: 'POST',
                 body: JSON.stringify({
                     user_name : datos.name,

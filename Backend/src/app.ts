@@ -9,6 +9,7 @@ import checkAPI from './interfaces/routes/checkAPI';
 import hello from './interfaces/routes/hello';
 import products from "./interfaces/routes/products";
 import auth from "./interfaces/routes/auth";
+import productOrders from "./interfaces/routes/productOrders";
 
 
 const app = express();
@@ -26,6 +27,7 @@ app.use(express.json());
 app.use(checkAPI);
 app.use(hello);
 app.use(products);
-app.use(auth)
+app.use(auth);
+app.use(productOrders);
 
 export default app;

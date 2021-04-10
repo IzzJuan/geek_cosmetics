@@ -9,6 +9,31 @@ const StoreProduct = ({productSelected, setCarritoAccount, carritoAccount}) => {
             history.push('/store');
         }
     })
+
+    const submitHandler = () => {
+    let item = productSelected
+        if (carritoAccount.products.find(({id}) => id === item.id)) {
+            carritoAccount.products.forEach((product) => {
+
+                if (product.id === item.id) {
+                    item.product_amount = product.product_amount + 1;
+                }
+            })
+
+            setCarritoAccount({
+                product_quantity: carritoAccount.product_quantity,
+                products: [...carritoAccount.products.filter(product => product.id !== item.id), item]
+            })
+
+        } else {
+            setCarritoAccount({
+                product_quantity: carritoAccount.product_quantity + 1,
+                products: [...carritoAccount.products, item]
+            })
+
+        }
+    }
+
     return(
         <div>
             <div className="container" style={{paddingTop:'77px', minHeight:'100vh'}}>
@@ -25,7 +50,7 @@ const StoreProduct = ({productSelected, setCarritoAccount, carritoAccount}) => {
                                 <p className="text-start">Some quick example text to build on the card title and make up the bulk of the card's content.{/*productSelected.product_description*/}{/*productSelected.product_description*/}</p>
                             </div>
                             <div className="buttonProductsContainer">
-                                <button className="px-3 py-2 m-2" onClick={() => setCarritoAccount(carritoAccount + 1)} style={{border:'1px solid white', background:'none', color:'white', borderRadius:'7px'}}>Añadir al carrito</button>
+                                <button className="px-3 py-2 m-2" onClick={() => submitHandler()} style={{border:'1px solid white', background:'none', color:'white', borderRadius:'7px'}}>Añadir al carrito</button>
                             </div>
                         </div>
                     </div>

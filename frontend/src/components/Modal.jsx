@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDom from 'react-dom';
 
-export default function Modal({open, children, onClose}) {
+export default function Modal({isOpen, children, onClose}) {
 
     const MODAL_STYLES = {
         position: 'fixed',
@@ -23,7 +23,7 @@ export default function Modal({open, children, onClose}) {
         zIndex: 1000
     }
 
-    if (!open) return null
+    if (!isOpen.open) return null
 
     return ReactDom.createPortal(
         <>
