@@ -27,7 +27,7 @@ function BuyCart({carritoAccount, setCarritoAccount}) {
     const HandleSubmit = (e) => {
         e.preventDefault();
 
-        if(!JSON.parse(localStorage.getItem('user'))){  
+        if(!JSON.parse(localStorage.getItem('user'))){
             history.push('/login');
         } else {
 
