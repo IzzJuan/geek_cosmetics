@@ -50,6 +50,16 @@ function BuyCart({carritoAccount, setCarritoAccount}) {
 
     }
 
+    const removeItem = (removeItemId) =>{
+
+        let newcarritoAccount = carritoAccount.products.filter(item => item.id !== removeItemId)
+
+        setCarritoAccount({
+            product_quantity: carritoAccount.product_quantity-1,
+            products: newcarritoAccount,
+        });
+    }
+
     const prueba = () =>{
 
         setIsOpen({open:false, message: ''});
@@ -86,13 +96,18 @@ function BuyCart({carritoAccount, setCarritoAccount}) {
                                                             <h4>
                                                                 {product.product_name}
                                                             </h4>
-                                                            <h4 style={{fontWeight:'bold'}}>
-                                                                Precio: {product.product_price ? product.product_price : 'Sin precio'}
+                                                            <h4>
+                                                                <button onClick={()=> removeItem(product.id)} type='button' className='deleteButton button1' style={{color:'white'}}>
+                                                                    X
+                                                                </button>
                                                             </h4>
                                                         </div>
                                                         <div className="mt-3 text-start d-flex flex-column">
-                                                            <div style={{width:'100%'}}>
-                                                                <p>{(product.product_description) ? product.product_description : 'No descripción'}</p>
+                                                            <div style={{width:'100%'}} className='row d-flex'>
+
+                                                                <div className='col-sm'><p>{(product.product_description) ? product.product_description : 'No descripción'}</p></div>
+                                                                <div className='col-sm d-flex flex-row-reverse bd-highlight'> <h4>Precio: {product.product_price ? product.product_price : 'Sin precio'}</h4></div>
+
                                                             </div>
                                                             <div style={{width:'100%'}}>
                                                                 <h5><b>Cantidad:</b> {product.product_amount}</h5>

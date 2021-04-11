@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.1bb53f9f.chunk.css",
-    "main.js": "/static/js/main.61feac5c.chunk.js",
-    "main.js.map": "/static/js/main.61feac5c.chunk.js.map",
+    "main.css": "/static/css/main.1ea11922.chunk.css",
+    "main.js": "/static/js/main.c3dcd79e.chunk.js",
+    "main.js.map": "/static/js/main.c3dcd79e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.094d12d8.js",
     "runtime-main.js.map": "/static/js/runtime-main.094d12d8.js.map",
     "static/js/2.069d45c3.chunk.js": "/static/js/2.069d45c3.chunk.js",
     "static/js/2.069d45c3.chunk.js.map": "/static/js/2.069d45c3.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.1bb53f9f.chunk.css.map": "/static/css/main.1bb53f9f.chunk.css.map",
+    "static/css/main.1ea11922.chunk.css.map": "/static/css/main.1ea11922.chunk.css.map",
     "static/js/2.069d45c3.chunk.js.LICENSE.txt": "/static/js/2.069d45c3.chunk.js.LICENSE.txt",
     "static/media/Options.css": "/static/media/imagenLibros.a7483b72.jpeg",
     "static/media/imgcosmetics.3f39ba71.jpg": "/static/media/imgcosmetics.3f39ba71.jpg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.094d12d8.js",
     "static/js/2.069d45c3.chunk.js",
-    "static/css/main.1bb53f9f.chunk.css",
-    "static/js/main.61feac5c.chunk.js"
+    "static/css/main.1ea11922.chunk.css",
+    "static/js/main.c3dcd79e.chunk.js"
   ]
 }

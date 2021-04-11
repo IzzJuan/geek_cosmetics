@@ -45,7 +45,6 @@ function StoreComponent({setCarritoAccount, carritoAccount, setProductSelected})
             })
 
         }
-        console.log(carritoAccount.products)
     }
 
     return (
